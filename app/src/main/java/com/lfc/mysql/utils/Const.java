@@ -43,6 +43,8 @@ public class Const {
     public static final String Data_PhotoIMG = "photo.jpg";
     public static final String Data_LogoIMG = "logo";
 
+    public static final String DB_Multab = "mulTb.db";
+
     /**
      * 需要进行检测的权限数组
      */

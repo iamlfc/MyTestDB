@@ -24,7 +24,7 @@ import kotlin.random.Random
 /*
    *@Author LFC
    *@Date 2020-2-1 13:05:03
-   *@Remarks:
+   *@Remarks: 基本操作
    */
 class MainActivity : AppCompatActivity() {
 //  private var StrValue = ""

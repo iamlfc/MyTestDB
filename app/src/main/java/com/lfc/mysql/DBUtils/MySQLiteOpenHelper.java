@@ -3,7 +3,9 @@ package com.lfc.mysql.DBUtils;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.lfc.mysql.greenDao.CustomerDDao;
 import com.lfc.mysql.greenDao.DaoMaster;
+import com.lfc.mysql.greenDao.OrdersDDao;
 import com.lfc.mysql.greenDao.StudentDao;
 import com.lfc.mysql.greenDao.UserDDao;
 
@@ -32,6 +34,6 @@ public class MySQLiteOpenHelper extends DaoMaster.OpenHelper {
             public void onDropAllTables(Database db, boolean ifExists) {
                 DaoMaster.dropAllTables(db, ifExists);
             }
-        }, StudentDao.class, UserDDao.class);//, UserDao.class
+        }, StudentDao.class, UserDDao.class, CustomerDDao.class, OrdersDDao.class);//, UserDao.class
     }
 }

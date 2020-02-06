@@ -24,7 +24,7 @@ android {
 }
 
 greendao {
-    schemaVersion 3 // 数据库版本号
+    schemaVersion 4 // 数据库版本号
     daoPackage 'com.lfc.mysql.greenDao'  // 设置 DaoMaster、DaoSession、Dao 包名
     targetGenDir 'src/main/java'  // 设置 DaoMaster、DaoSession、Dao 目录
 }
@@ -45,4 +45,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //适配器
     implementation 'com.zhy:base-rvadapter:3.0.3'
+//    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
 }
