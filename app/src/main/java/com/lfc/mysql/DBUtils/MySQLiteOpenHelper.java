@@ -3,9 +3,11 @@ package com.lfc.mysql.DBUtils;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.lfc.mysql.greenDao.CardInfoDDao;
 import com.lfc.mysql.greenDao.CustomerDDao;
 import com.lfc.mysql.greenDao.DaoMaster;
 import com.lfc.mysql.greenDao.OrdersDDao;
+import com.lfc.mysql.greenDao.PersonInfoDDao;
 import com.lfc.mysql.greenDao.StudentDao;
 import com.lfc.mysql.greenDao.UserDDao;
 
@@ -25,15 +27,16 @@ public class MySQLiteOpenHelper extends DaoMaster.OpenHelper {
     public void onUpgrade(Database db, int oldVersion, int newVersion) {
         MigrationHelper.migrate(db, new MigrationHelper.ReCreateAllTableListener() {
 
-            @Override
-            public void onCreateAllTables(Database db, boolean ifNotExists) {
-                DaoMaster.createAllTables(db, ifNotExists);
-            }
+                    @Override
+                    public void onCreateAllTables(Database db, boolean ifNotExists) {
+                        DaoMaster.createAllTables(db, ifNotExists);
+                    }
 
-            @Override
-            public void onDropAllTables(Database db, boolean ifExists) {
-                DaoMaster.dropAllTables(db, ifExists);
-            }
-        }, StudentDao.class, UserDDao.class, CustomerDDao.class, OrdersDDao.class);//, UserDao.class
+                    @Override
+                    public void onDropAllTables(Database db, boolean ifExists) {
+                        DaoMaster.dropAllTables(db, ifExists);
+                    }
+                }, StudentDao.class, UserDDao.class, CustomerDDao.class, OrdersDDao.class,
+                PersonInfoDDao.class, CardInfoDDao.class);//, UserDao.class
     }
 }

@@ -44,6 +44,7 @@ public class Const {
     public static final String Data_LogoIMG = "logo";
 
     public static final String DB_Multab = "mulTb.db";
+    public static final String DB_OneToMany = "person_card.db";
 
     /**
      * 需要进行检测的权限数组

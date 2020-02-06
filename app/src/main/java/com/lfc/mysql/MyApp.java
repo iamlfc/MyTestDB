@@ -17,13 +17,12 @@ import org.greenrobot.greendao.database.Database;
 public class MyApp extends Application {
     private DaoSession daoSession;
 
-
     @Override
     public void onCreate() {
         super.onCreate();
         // regular SQLite database
         DatabaseContext databaseContext = new DatabaseContext(this);
-        MySQLiteOpenHelper devOpenHelper = new MySQLiteOpenHelper(databaseContext, Const.DB_Multab, null);
+        MySQLiteOpenHelper devOpenHelper = new MySQLiteOpenHelper(databaseContext, Const.DB_OneToMany, null);
         Database db = devOpenHelper.getEncryptedWritableDb("123456");
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
